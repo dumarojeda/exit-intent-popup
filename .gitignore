@@ -1,0 +1,138 @@
+#
+# .gitignore file.
+#
+# This file specifies intentionally untracked files to ignore. This file should 
+# contain a set of rules to the help the GIT repository work with a specific 
+# programming language, framework, tool and environment.
+#
+# @see https://git-scm.com/docs/gitignore
+# @see https://github.com/github/gitignore
+#
+
+#
+# SITE
+#
+# Sensible data files
+license
+!license/
+readme.md
+readme.html
+readme.txt
+# Include site documentation files
+!/.docs/*.md
+/.docs/documentation/*
+
+#
+# ENVIRONMENT
+#
+# Log files and databases
+*.log
+*.sql
+*.sqlite
+# Environment variables files
+.env
+# Apache configuration files
+.htaccess
+# PHP configuration files
+.user.ini
+php.ini
+# cPanel directory used by AutoSSL when validating the domain
+.well-known/
+# Node dependency directories
+node_modules/
+jspm_packages/
+# Composer lock file
+# https://getcomposer.org/doc/01-basic-usage.md#commit-your-composer-lock-file-to-version-control
+# You may choose to ignore the library lock file composer.lock
+# http://getcomposer.org/doc/02-libraries.md#lock-file
+composer.phar
+
+#
+# SASS
+#
+.sass-cache/
+*.css.map
+*.sass.map
+*.scss.map
+
+#
+# VISUAL STUDIO CODE
+#
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+*.code-workspace
+.history/
+
+#
+# LINUX
+#
+*~
+# temporary files which can be created if a process still has a handle open of a deleted file
+.fuse_hidden*
+# KDE directory preferences
+.directory
+# Linux trash folder which might appear on any partition or disk
+.Trash-*
+# .nfs files are created when an open file is removed but is still being accessed
+.nfs*
+
+#
+# MACOS
+#
+# General
+.DS_Store
+.AppleDouble
+.LSOverride
+# Thumbnails
+._*
+# Files that might appear in the root of a volume
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+# Directories potentially created on remote AFP share
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
+
+#
+# MICROSOFT OFFICE - TEMP, WORD, EXCEL, POWERPOINT AND VISIO
+#
+*.tmp
+~$*.doc*
+Backup of *.doc*
+~$*.xls*
+*.xlk
+~$*.ppt*
+*.~vsd*
+
+#
+# WINDOWS
+#
+# Windows thumbnail cache files
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+# Dump file
+*.stackdump
+# Folder config file
+[Dd]esktop.ini
+# Recycle bin used on file shares
+$RECYCLE.BIN/
+# Windows installer files
+*.cab
+*.msi
+*.msix
+*.msm
+*.msp
+# Windows shortcuts
+*.lnk

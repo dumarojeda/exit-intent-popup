@@ -1,0 +1,14 @@
+{
+  "name": "exit-intent-popup",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "vite",
+    "build": "rm -rf dist && vite build --emptyOutDir",
+    "preview": "vite preview",
+    "serve": "npm run build && vite preview"
+  },
+  "devDependencies": {
+    "sass": "^1.66.1",
+    "vite": "^4.4.5"
+  }
+}

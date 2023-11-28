@@ -1,0 +1,25 @@
+/**
+ * Mixins.
+ */
+
+/*Screen sizes. */
+$screen_sm: '576px';
+$screen_md: '768px';
+$screen_lg: '992px';
+$screen_xl: '1200px';
+$screen_xxl: '1400px';
+
+@media (max-width: $screen_sm) {
+}
+
+@media (max-width: $screen_md) {
+}
+
+@media (max-width: $screen_lg) {
+}
+
+@media (max-width: $screen_xl) {
+}
+
+@media (max-width: $screen_xxl) {
+}

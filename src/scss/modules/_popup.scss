@@ -1,0 +1,151 @@
+/**
+ * Pop up.
+ */
+.exit-intent-popup {
+  background-color: rgba($black, 0.7);
+  z-index: 99999;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  place-items: center;
+  display: none;
+  visibility: hidden;
+  opacity: 0;
+  &.active {
+    opacity: 1;
+    display: grid;
+    visibility: visible;
+  }
+  .popup-container {
+    max-width: 900px;
+    background: white;
+    border-radius: 11px;
+    padding: 3em;
+    position: relative;
+    margin: 1.5rem;
+    @media (max-width: $screen_md) {
+      padding: 3rem 1rem 2rem;
+      height: 80vh;
+      overflow: hidden;
+    }
+    .inner-content {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 4em;
+      @media (max-width: $screen_md) {
+        display: block;
+        grid-template-columns: inherit;
+        gap: 0;
+        height: 100%;
+        overflow-y: scroll;
+      }
+      .col {
+        .main-title {
+          font-family: $font-heading;
+          font-size: 2.4rem;
+          line-height: 3rem;
+          color: $dark-900;
+          @media (max-width: $screen_md) {
+            font-size: 2rem;
+            line-height: 2.5rem;
+          }
+        }
+        .main-description {
+          p {
+            font-family: $font-content;
+            font-size: 1.2rem;
+            line-height: 1.7rem;
+            color: $dark-500;
+            @media (max-width: $screen_md) {
+              font-size: 1.1rem;
+              line-height: 1.6rem;
+            }
+          }
+        }
+        .newsletter-form {
+          margin-top: 4rem;
+          display: flex;
+          gap: 10px;
+          font-family: $font-content;
+          color: $dark-500;
+          @media (max-width: $screen_md) {
+            margin-top: 2rem;
+          }
+          .field {
+            width: 60%;
+            padding: 12px 10px;
+            border: 0;
+            background-color: $whitesmoke;
+            border-radius: 5px;
+          }
+          .button {
+            width: 40%;
+            padding: 12px 10px;
+            border: 0;
+            background-color: $green-300;
+            color: $white;
+            text-transform: uppercase;
+            border-radius: 5px;
+            box-shadow: 2px 4px 8px rgba($black, 0.3);
+            font-family: $font-button;
+          }
+        }
+        .info {
+          width: 100%;
+          margin-top: 15px;
+          font-size: 0.9rem;
+          color: $dark-500;
+        }
+        .second-title {
+          font-family: $font-highlighted-bold;
+          font-size: 2.3rem;
+          width: 100%;
+          margin: 2rem 0 0;
+          span {
+            display: block;
+            font-family: $font-highlighted;
+            background-color: rgba($green-200, 0.8);
+          }
+        }
+        .main-phrase {
+          width: 70%;
+          margin-top: 1rem;
+          p {
+            font-family: Biotif Regular;
+            font-size: 1.3rem;
+            line-height: 1.8rem;
+          }
+        }
+        img {
+          width: 150px;
+          height: auto;
+          margin-top: 3rem;
+        }
+      }
+    }
+    .popup-close {
+      position: absolute;
+      top: 0;
+      right: -46px;
+      cursor: pointer;
+      background-image: url('../img/close-icon.svg');
+      background-color: $dark-600;
+      width: 45px;
+      height: 45px;
+      background-repeat: no-repeat;
+      background-size: 35px;
+      border-radius: 50%;
+      background-position: center;
+      box-shadow: 2px 4px 8px rgba($black, 0.3);
+      @media (max-width: $screen_lg) {
+        top: 10px;
+        right: 10px;
+        width: 40px;
+        height: 40px;
+        background-size: 30px;
+      }
+    }
+  }
+}
